@@ -181,3 +181,31 @@ header h1::before {
   font-size: 70%;
   vertical-align: middle;
 }
+
+/* About / GEO section */
+.about-section {
+  margin-top: 2rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.75rem 2rem;
+  font-size: .9rem; line-height: 1.75; color: var(--muted);
+}
+.about-section h2 {
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+  color: var(--gold); margin-bottom: .75rem;
+}
+.about-section p { margin-bottom: .75rem; }
+.about-section p:last-of-type { margin-bottom: 1rem; }
+.about-section strong { color: var(--text); }
+.about-section em { color: var(--accent); font-style: normal; }
+.about-section details { margin-top: .5rem; }
+.about-section summary {
+  cursor: pointer; color: var(--accent); font-size: .85rem;
+  font-weight: 700; letter-spacing: .05rem; text-transform: uppercase;
+  padding: .5rem 0; list-style: none; outline: none;
+}
+.about-section summary::-webkit-details-marker { display: none; }
+.about-section summary::before { content: '+ '; }
+details[open] summary::before { content: '- '; }
+.about-section dl { margin-top: .75rem; }
+.about-section dt { color: var(--text); font-weight: 700; margin-top: .75rem; }
+.about-section dd { margin: .2rem 0 0 1rem; }

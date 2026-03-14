@@ -3,7 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>City Name Generator</title>
+
+  <!-- Primary SEO -->
+  <title>City Name Generator — 2,000+ Fantasy, Medieval, Sci-Fi & Ancient Names</title>
+  <meta name="description" content="Generate city names for fantasy worlds, medieval settings, sci-fi universes, and ancient civilizations. Browse 2,000+ curated names or use AI to name your city from a description. Free, no signup." />
+  <meta name="keywords" content="city name generator, fantasy city names, medieval city names, sci-fi city names, ancient city names, town name generator, world building names, D&D city names, fictional city name generator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="http://10.10.10.108:5558/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="City Name Generator — Fantasy, Medieval, Sci-Fi & Ancient" />
+  <meta property="og:description" content="Generate city names for any world. 2,000+ curated names across 4 styles, or use AI to name your city from a description." />
+  <meta property="og:url" content="http://10.10.10.108:5558/" />
+  <meta property="og:site_name" content="City Name Generator" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="City Name Generator — Fantasy, Medieval, Sci-Fi & Ancient" />
+  <meta name="twitter:description" content="Generate city and town names for fantasy, medieval, sci-fi, and ancient settings. 2,000+ curated names or AI-generated from your city description." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "City Name Generator",
+        "url": "http://10.10.10.108:5558/",
+        "description": "A free city name generator with over 2,000 curated names across fantasy, medieval, sci-fi, and ancient styles, plus an AI mode that names cities from descriptions.",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "2,000+ curated city names",
+          "Styles: Fantasy, Medieval, Sci-Fi, Ancient",
+          "AI-generated names from city descriptions",
+          "Name etymology and lore explanations",
+          "Instant results, no signup required"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What styles of city names can I generate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The generator offers four styles: Fantasy (arcane, elvish, and epic-sounding names), Medieval (Germanic, Anglo-Saxon, and Latin-root names), Sci-Fi (technical, Greek/Latin hybrid names with alphanumeric elements), and Ancient (Sumerian, Egyptian, Greek, and Roman-inspired names)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this good for D&D world building?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The fantasy and medieval name pools are specifically designed for tabletop RPG world building, including D&D, Pathfinder, and other fantasy systems. The AI mode can name cities based on their role, geography, or culture in your campaign."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the AI explain the meaning of the city name?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. When you use the AI Generate mode and describe your city, the generator returns two city names along with lore notes explaining the linguistic roots and what each name evokes — useful for world building documentation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -25,7 +99,7 @@
     </div>
 
     <!-- RANDOM TAB -->
-    <section id="tab-random" class="tab-content active">
+    <section id="tab-random" class="tab-content active" aria-label="Random city name picker">
       <div class="card">
         <h2>Pick a Random City Name</h2>
         <p class="card-desc">Choose a style and draw from 2,000+ city names across four world-types.</p>
@@ -35,10 +109,10 @@
             <label>Style</label>
             <div class="cat-buttons">
               <button class="cat-btn active" data-cat="all">All</button>
-              <button class="cat-btn" data-cat="fantasy">⚔️ Fantasy</button>
-              <button class="cat-btn" data-cat="medieval">🏰 Medieval</button>
-              <button class="cat-btn" data-cat="sci-fi">🚀 Sci-Fi</button>
-              <button class="cat-btn" data-cat="ancient">🏛️ Ancient</button>
+              <button class="cat-btn" data-cat="fantasy">Fantasy</button>
+              <button class="cat-btn" data-cat="medieval">Medieval</button>
+              <button class="cat-btn" data-cat="sci-fi">Sci-Fi</button>
+              <button class="cat-btn" data-cat="ancient">Ancient</button>
             </div>
           </div>
           <div class="form-group">
@@ -58,7 +132,7 @@
     </section>
 
     <!-- GENERATE TAB -->
-    <section id="tab-generate" class="tab-content">
+    <section id="tab-generate" class="tab-content" aria-label="AI city name generator">
       <div class="card">
         <h2>Generate from Description</h2>
         <p class="card-desc">Describe your city — the cartographer will name it.</p>
@@ -74,10 +148,10 @@
           <label>Style <span class="optional">(optional)</span></label>
           <div class="cat-buttons">
             <button class="gen-cat-btn active" data-cat="any">Any</button>
-            <button class="gen-cat-btn" data-cat="fantasy">⚔️ Fantasy</button>
-            <button class="gen-cat-btn" data-cat="medieval">🏰 Medieval</button>
-            <button class="gen-cat-btn" data-cat="sci-fi">🚀 Sci-Fi</button>
-            <button class="gen-cat-btn" data-cat="ancient">🏛️ Ancient</button>
+            <button class="gen-cat-btn" data-cat="fantasy">Fantasy</button>
+            <button class="gen-cat-btn" data-cat="medieval">Medieval</button>
+            <button class="gen-cat-btn" data-cat="sci-fi">Sci-Fi</button>
+            <button class="gen-cat-btn" data-cat="ancient">Ancient</button>
           </div>
         </div>
 
@@ -85,6 +159,25 @@
         <div class="results" id="results-generate"></div>
       </div>
     </section>
+
+    <!-- GEO: About section -->
+    <section class="about-section" aria-label="About this tool">
+      <h2>About the City Name Generator</h2>
+      <p>This free city name generator helps writers, game designers, and world builders create believable city and town names for any setting. The random mode draws from <strong>2,000+ curated names</strong> across four styles: Fantasy, Medieval, Sci-Fi, and Ancient.</p>
+      <p>The AI mode uses a language model to craft <strong>unique city names tailored to your world</strong>, including lore notes on linguistic roots and what the name evokes. Describe your city's geography, culture, or role and receive names like <em>Ashenvorn</em> or <em>Vexion-7</em> with full explanation.</p>
+      <details>
+        <summary>Frequently Asked Questions</summary>
+        <dl>
+          <dt>What is the city name generator good for?</dt>
+          <dd>World building for novels, D&D campaigns, video games, tabletop RPGs, and any creative project that needs believable fictional place names.</dd>
+          <dt>How are the fantasy city names created?</dt>
+          <dd>Fantasy names use elvish, arcane, and epic-sounding syllable combinations inspired by Tolkien, D&D, and high fantasy traditions. Medieval names use Anglo-Saxon, Germanic, and Latin roots similar to real English place names.</dd>
+          <dt>Can I generate sci-fi planet or station names?</dt>
+          <dd>Yes — the Sci-Fi style produces names suitable for space colonies, orbital stations, megacities, and distant planets.</dd>
+        </dl>
+      </details>
+    </section>
+
   </main>
 
   <footer></footer>
