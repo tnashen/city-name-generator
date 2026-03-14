@@ -54,14 +54,14 @@ def api_generate_status(job_id):
 
 @app.route("/robots.txt")
 def robots():
-    return Response("User-agent: *\nAllow: /\nSitemap: http://10.10.10.108:5558/sitemap.xml\n",
+    return Response("User-agent: *\nAllow: /\nSitemap: https://city.rndgen.io/sitemap.xml\n",
                     mimetype="text/plain")
 
 @app.route("/sitemap.xml")
 def sitemap():
     xml = ('<?xml version="1.0" encoding="UTF-8"?>'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-           '<url><loc>http://10.10.10.108:5558/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>'
+           '<url><loc>https://city.rndgen.io/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>'
            '</urlset>')
     return Response(xml, mimetype="application/xml")
 
