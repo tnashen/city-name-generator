@@ -1,0 +1,11 @@
+services:
+  city-app:
+    build: .
+    container_name: city-name-generator
+    ports:
+      - "5558:5558"
+    environment:
+      FEATHERLESS_API_KEY: ${FEATHERLESS_API_KEY}
+      FEATHERLESS_MODEL:   ${FEATHERLESS_MODEL:-Qwen/Qwen2.5-1.5B-Instruct}
+      MAX_CONCURRENT:      "2"
+    restart: unless-stopped

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>City Name Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css?v=1" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <header>
+    <div class="map-line">— ◆ — ◆ — ◆ — ◆ — ◆ — ◆ — ◆ — ◆ —</div>
+    <h1>🏙️ City Name Generator</h1>
+    <p class="subtitle">Name your city — drawn from ancient maps or forged by the cartographer's oracle</p>
+    <div class="map-line">— ◆ — ◆ — ◆ — ◆ — ◆ — ◆ — ◆ — ◆ —</div>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab active" data-tab="random">🎲 Random Name</button>
+      <button class="tab" data-tab="generate">🗺️ Generate from Description</button>
+    </div>
+
+    <!-- RANDOM TAB -->
+    <section id="tab-random" class="tab-content active">
+      <div class="card">
+        <h2>Pick a Random City Name</h2>
+        <p class="card-desc">Choose a style and draw from 2,000+ city names across four world-types.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Style</label>
+            <div class="cat-buttons">
+              <button class="cat-btn active" data-cat="all">All</button>
+              <button class="cat-btn" data-cat="fantasy">⚔️ Fantasy</button>
+              <button class="cat-btn" data-cat="medieval">🏰 Medieval</button>
+              <button class="cat-btn" data-cat="sci-fi">🚀 Sci-Fi</button>
+              <button class="cat-btn" data-cat="ancient">🏛️ Ancient</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>How many?</label>
+            <div class="count-row">
+              <button class="count-btn" data-n="1">1</button>
+              <button class="count-btn active" data-n="3">3</button>
+              <button class="count-btn" data-n="5">5</button>
+              <button class="count-btn" data-n="10">10</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="btn-random">◆ Generate City Names</button>
+        <div class="results" id="results-random"></div>
+      </div>
+    </section>
+
+    <!-- GENERATE TAB -->
+    <section id="tab-generate" class="tab-content">
+      <div class="card">
+        <h2>Generate from Description</h2>
+        <p class="card-desc">Describe your city — the cartographer will name it.</p>
+
+        <div class="form-group">
+          <label for="description">City Description</label>
+          <textarea id="description" rows="4"
+            placeholder="A coastal trading city built on volcanic cliffs, known for its glassblowers and merchants, perpetually shrouded in sea mist..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Style <span class="optional">(optional)</span></label>
+          <div class="cat-buttons">
+            <button class="gen-cat-btn active" data-cat="any">Any</button>
+            <button class="gen-cat-btn" data-cat="fantasy">⚔️ Fantasy</button>
+            <button class="gen-cat-btn" data-cat="medieval">🏰 Medieval</button>
+            <button class="gen-cat-btn" data-cat="sci-fi">🚀 Sci-Fi</button>
+            <button class="gen-cat-btn" data-cat="ancient">🏛️ Ancient</button>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="btn-generate">🗺️ Name This City</button>
+        <div class="results" id="results-generate"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+  <script src="/static/app.js?v=1"></script>
+</body>
+</html>
